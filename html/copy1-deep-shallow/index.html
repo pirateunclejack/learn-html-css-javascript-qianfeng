@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script>
+        // basic type
+        // myname = 'kerwin'
+        // myname1 = myname
+        // myname1 = 'xiaoming'
+        // 
+        // console.log(myname, myname1)
+        // 
+        // complex type
+        // var myobj1 = {
+        // name: 'kerwin'
+        // }
+        // var myobj2 = myobj1
+        // myobj2.name = 'xiaoming'
+        // 
+        // console.log(myobj1, myobj2)
+
+        var myobj1 = {
+            name: 'kerwin',
+            location: {
+                city: 'dalian',
+                province: 'dalian'
+            },
+            hobby: ['basketball', 'football', 'pingpang'],
+            introduction: undefined
+        }
+        // var myobj2 = {}
+        // for (var i in myobj1) {
+        //     myobj2[i] = myobj1[i]
+        // }
+        // myobj2.name = 'xiaoming'
+        // console.log(myobj1, myobj2)
+
+        // var myobj3 = { ...myobj1 }
+        // myobj3.name = 'tiechui'
+        // myobj3.location.province = 'Heilongjiang'
+        // console.log(myobj3, myobj2)
+
+        var myobj2 = {}
+        function deepCopy(o2, o1) {
+            for (var i in o1) {
+                if (o1[i]?.toString() === '[object Object]') {
+                    o2[i] = {}
+                    deepCopy(o2[i], o1[i])
+                } else if (Object.prototype.toString.call(o1[i]) === '[objtce Array]') {
+                    o2[i] = []
+                    deepCopy(o2[i], o1[i])
+                } else {
+                    o2[i] = o1[i]
+                }
+            }
+
+        }
+        deepCopy(myobj2, myobj1)
+        // myobj2.location.city = 'heilongjiang'
+
+        // var myobj2 = JSON.parse(JSON.stringify(myobj1))
+        console.log(myobj2, myobj1)
+    </script>
+</body>
+
+</html>

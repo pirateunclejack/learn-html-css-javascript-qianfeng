@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../font/iconfont.css">
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      height: 44px;
+      background: #0cc440;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    header div {
+      width: 60px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+    }
+
+    header div:nth-child(1) {
+      border-radius: 12px 0 0 12px;
+      background: #63d985;
+      color: white;
+    }
+
+    header div:nth-child(2) {
+      border-radius: 0 12px 12px 0;
+      background: #3dd066;
+      color: #a9e4b4;
+    }
+
+    section {
+      flex: 1;
+      overflow: auto;
+    }
+
+    section ul {
+      display: flex;
+      position: sticky;
+      top: 0px;
+      background: white;
+    }
+
+    section ul li {
+      flex: 1;
+      text-align: center;
+      height: 35px;
+      line-height: 35px;
+      border-bottom: 1px solid #d9d9d9;
+      color: #8c8c8c;
+      font-size: 14px;
+    }
+
+    section ul li:hover {
+      border-bottom: 2px solid #08c63e;
+      color: #08c63e;
+    }
+
+    section .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    section .list>div {
+      width: 49%;
+      margin-top: 4px;
+      border: 1px solid gray;
+    }
+
+    section .list>div img {
+      width: 100%;
+      height: 150px;
+    }
+
+    section .list>div p {
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      text-indent: 10px;
+    }
+
+    footer {
+      height: 44px;
+      background: white;
+    }
+
+    footer ul {
+      display: flex;
+      height: 100%;
+    }
+
+    footer li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      color: #8c8c8c;
+    }
+
+    footer li:hover {
+      color: #08c63e
+    }
+
+    footer li i {
+      height: 21px;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    footer li span {
+      height: 17px;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+
+    }
+
+    footer li:nth-child(3) {
+      position: relative;
+    }
+
+    footer li:nth-child(3) i {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #8c8c8c;
+      border-radius: 50%;
+      position: absolute;
+      line-height: 50px;
+      font-size: 30px;
+      left: 50%;
+      margin-left: -25px;
+      top: -8px;
+      text-align: center;
+      background: white;
+      color: #8c8c8c;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div>Central</div>
+    <div>Follow</div>
+  </header>
+  <section>
+    <ul>
+      <li>Football Site</li>
+      <li>Football Life</li>
+      <li>Football Girl</li>
+    </ul>
+    <div class="list">
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+
+      <div>
+        <img src="../img/bg.png" alt="">
+        <p>Hello</p>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>
+        <i class="iconfont icon-home"></i>
+        <span>Home</span>
+      </li>
+      <li>
+        <i class="iconfont icon-search"></i>
+        <span>Search</span>
+      </li>
+
+      <li>
+        <i class="iconfont icon-picture"></i>
+      </li>
+
+      <li>
+        <i class="iconfont icon-me"></i>
+        <span>Me</span>
+      </li>
+      <li>
+        <i class="iconfont icon-me"></i>
+        <span>Me</span>
+      </li>
+
+    </ul>
+  </footer>
+</body>
+
+</html>

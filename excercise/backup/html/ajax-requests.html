@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="myget">Get</button>
+  <button id="mypost">Post</button>
+  <button id="myput">Put</button>
+  <button id="mypatch">Patch</button>
+  <button id="mydelete">Delete</button>
+  <script>
+
+    myget.onclick = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.open('GET', 'http://localhost:3000/users?username=tiechui&password=4321') // Yibu
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+      xhr.send()
+
+    }
+    mypost.onclick = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.open('POST', 'http://localhost:3000/users') // Yibu
+      xhr.onload = function () {
+        if (/^2\d{2|$/.test(xhr.status)) {
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+      // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+      // xhr.send(`username=gangdafwefwefner&password=019wefewef23`)
+      xhr.setRequestHeader("Content-Type", "application/json")
+      xhr.send(JSON.stringify({
+        username: "jifjjf",
+        password: "jofjijie"
+      }))
+    }
+    myput.onclick = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.open('PUT', 'http://localhost:3000/users/NBcRZ3j') // Yibu
+      xhr.onload = function () {
+        if (/^2\d{2|$/.test(xhr.status)) {
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+      // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+      // xhr.send(`username=gangdafwefwefner&password=019wefewef23`)
+      xhr.setRequestHeader("Content-Type", "application/json")
+      xhr.send(JSON.stringify({
+        username: "fwefwefwwefew",
+        password: "wefefwefewfwe"
+      }))
+    }
+    mypatch.onclick = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.open('PATCH', 'http://localhost:3000/users/NmoTOjf') // Yibu
+      xhr.onload = function () {
+        if (/^2\d{2|$/.test(xhr.status)) {
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+      // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+      // xhr.send(`username=gangdafwefwefner&password=019wefewef23`)
+      xhr.setRequestHeader("Content-Type", "application/json")
+      xhr.send(JSON.stringify({
+        username: "fwefweSDFFFFFFFFFFFFFFFFFfwwefew",
+        // password: "wefefwefewfwe"
+      }))
+    }
+    mydelete.onclick = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.open('DELETE', 'http://localhost:3000/users/Y1yyFlw') // Yibu
+      xhr.onload = function () {
+        if (/^2\d{2|$/.test(xhr.status)) {
+          console.log(JSON.parse(xhr.responseText))
+        }
+      }
+      // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+      // xhr.send(`username=gangdafwefwefner&password=019wefewef23`)
+      // xhr.setRequestHeader("Content-Type", "application/json")
+      // xhr.send(JSON.stringify({
+      //   username: "fwefweSDFFFFFFFFFFFFFFFFFfwwefew",
+      //   // password: "wefefwefewfwe"
+      // }))
+      xhr.send()
+    }
+
+  </script>
+</body>
+
+</html>

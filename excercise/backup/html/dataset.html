@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="box" kerwin="hello">box</div>
+  <input type="text" value="Hello" id="username">
+  <input type="checkbox" checked="checked">
+  <input type="checkbox" checked id="rember">
+  <img src="" alt="" id="photo">
+  <ul>
+    <li data-myattr="1"></li>
+    <li data-myattr="2"></li>
+    <li data-myattr="3"></li>
+    <li data-myattr="4"></li>
+    <li data-myattr="5"></li>
+  </ul>
+  <div id="box2" data-set="jifowjioej" data-set2="jifowj">jowejji</div>
+
+  <script>
+    box.innerHTML = 'jjofwjoejf'
+    username.type = 'password'
+    console.log(username.type)
+    rember.checked = false
+    photo.src = '../img/docker.png'
+
+    box.setAttribute('attribute', 'attr')
+    console.log(box.getAttribute('kerwin'))
+    box.removeAttribute('kerwin')
+
+    var oitems = document.getElementsByTagName('li')
+    for (var i = 0; i < oitems.length; i++) {
+      // oitems[i].setAttribute('data-myattr', i)
+      oitems[i].dataset.index = i
+    }
+    box2.dataset.xiaoming = 'jofwjioe'
+    console.log(box2.dataset)
+    delete box2.dataset.xiaoming
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <button id="myget">get</button>
+    <button id="mypost">post</button>
+    <button id="myput">put</button>
+    <button id="mypatch">patch</button>
+    <button id="mydelete">delete</button>
+
+    <script>
+        function mygetclick() {
+            // $.ajax({
+            //     url: 'http://localhost:3000/users',
+            //     // async: true,
+            //     data: {
+            //         username: 'tiechui',
+            //     },
+            //     // method: 'get',
+            //     // dataType: 'string'
+            //     // dataType: 'json'
+            //     // success: function (res) {
+            //     //     console.log(res)
+            //     // },
+            //     // error: function (error) {
+            //     //     console.log(error)
+            //     // },
+            //     timeout: 1000
+            // }).then(res => {
+            //     console.log(res)
+            // }).catch(err => {
+            //     console.log(err)
+            // })
+            $.get('http://localhost:3000/users', {
+                username: 'tiechui'
+            }, function (res) {
+                console.log(res)
+            }).then(res => {
+                console.log(res)
+            })
+        }
+        $('#myget').click(mygetclick)
+
+        async function mypostclick() {
+            // var res = await $.ajax({
+            //     url: 'http://localhost:3000/users',
+            //     // async: true,
+            //     data: {
+            //         username: 'tiewerfwechui',
+            //         password: 'fwefwfwefefef'
+            //     },
+            //     method: 'post',
+            //     // headers: {
+            //     // 'content-type': 'application/json'
+            //     // 'content-type': 'application/www-x-formurlencode'
+            //     // },
+            //     // dataType: 'string'
+            //     // dataType: 'json'
+            //     // success: function (res) {
+            //     //     console.log(res)
+            //     // },
+            //     // error: function (error) {
+            //     //     console.log(error)
+            //     // },
+            //     // timeout: 1000
+            // })
+            // console.log('after await:', res)
+
+            var res = await $.post('http://localhost:3000/users', {
+                username: 'xiaoming',
+                password: 'jifjeoijwoej'
+            })
+            console.log(res)
+        }
+        $('#mypost').click(mypostclick)
+
+        function myputclick() {
+            $.ajax({
+                url: 'http://localhost:3000/users/3',
+                // async: true,
+                data: {
+                    username: 'tiewerchui',
+                    password: 'fwefwfsdfsdffef'
+                },
+                method: 'put',
+                // headers: {
+                // 'content-type': 'application/json'
+                // 'content-type': 'application/www-x-formurlencode'
+                // },
+                // dataType: 'string'
+                // dataType: 'json'
+                success: function (res) {
+                    console.log(res)
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                timeout: 1000
+            })
+        }
+        $('#myput').click(myputclick)
+
+        function mypatchclick() {
+            $.ajax({
+                url: 'http://localhost:3000/users/3',
+                // async: true,
+                data: {
+                    username: 'tiewerchui',
+                    password: 'fwefwfsdffffffffffffffffsdffef'
+                },
+                method: 'patch',
+                // headers: {
+                // 'content-type': 'application/json'
+                // 'content-type': 'application/www-x-formurlencode'
+                // },
+                // dataType: 'string'
+                // dataType: 'json'
+                success: function (res) {
+                    console.log(res)
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                timeout: 1000
+            })
+        }
+        $('#mypatch').click(mypatchclick)
+
+        function mydeleteclick() {
+            $.ajax({
+                url: 'http://localhost:3000/users/8',
+                // async: true,
+                // data: {
+                // username: 'tiewerchui',
+                // password: 'fwefwfsdfsdffef'
+                // },
+                method: 'delete',
+                // headers: {
+                // 'content-type': 'application/json'
+                // 'content-type': 'application/www-x-formurlencode'
+                // },
+                // dataType: 'string'
+                // dataType: 'json'
+                success: function (res) {
+                    console.log(res)
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                timeout: 1000
+            })
+        }
+        $('#mydelete').click(mydeleteclick)
+
+    </script>
+
+</body>
+
+</html>

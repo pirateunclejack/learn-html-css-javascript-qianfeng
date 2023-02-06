@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    ul li {
+      overflow: hidden;
+      height: 400px;
+    }
+
+    ul li img {
+      float: left;
+      width: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Title</h1>
+  <ul id="list">
+    <li>
+      <img src="../img/docker.png" alt="">
+      <h3>Dola A dream</h3>
+    </li>
+  </ul>
+  <script>
+    var arr1 = [{
+      name: 'name1',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name2',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name3',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name4',
+      url: '../img/docker.png'
+    },
+    ]
+
+    var arr2 = [{
+      name: 'name21',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name22',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name23',
+      url: '../img/docker.png'
+    },
+    {
+      name: 'name24',
+      url: '../img/docker.png'
+    },
+    ]
+    function renderHtml(arr) {
+      // list.innerHTML += arr.map(
+      //   function (item) {
+      //     return `<li>
+      //       <img src="${item.url}" alt="">
+      //       <h3>${item.name}</h3>
+      //     </li>`
+      //   }
+      // ).join("")
+
+      for (var i = 0; i < arr.length; i++) {
+        var oli = document.createElement("li")
+        oli.innerHTML = `<li>
+            <img src="${arr[i].url}" alt="">
+            <h3>${arr[i].name}</h3>
+          </li>`
+        list.appendChild(oli)
+      }
+    }
+    renderHtml(arr1)
+    isLoading = false
+    window.onscroll = function () {
+      var listHeight = list.offsetHeight
+      var listTop = list.offsetTop
+      console.log(listHeight, listTop)
+
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+
+      var windowHeight = document.documentElement.clientHeight
+
+      // console.log(Math.round(scrollTop + windowHeight))
+      if (isLoading) return
+      if (listHeight + listTop - Math.round(scrollTop + windowHeight) < 100) {
+        // renderHtml(arr2)
+        console.log("bottom")
+        isLoading = true
+        setTimeout(function () {
+          renderHtml(arr2)
+          isLoading = false
+
+        }, 1000);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

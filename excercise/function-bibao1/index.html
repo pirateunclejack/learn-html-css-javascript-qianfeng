@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function test() {
+        // console.log('test')
+        // }
+        // test()
+
+        // function test() {
+        //     var name = 'kerwin'
+        //     console.log(name)
+        //     obj = {
+        //         a: 1,
+        //         b: 2
+        //     }
+        //     return obj
+        // }
+        // var obj1 = test()
+        // var obj2 = test()
+        // obj1 = null
+        // obj2 = null
+
+        function outer() {
+            var name = 'kerwin'
+            return function () {
+                return name + '111111111111'
+            }
+        }
+        var func = outer()
+        console.log(func())
+        func()
+        func()
+
+        // fetch('https://www.a.com/aaa')
+        // fetch('https://www.a.com/bbb')
+        // fetch('https://www.a.com/ccc')
+        // fetch('https://www.a.com/ddd')
+        // fetch('https://www.a.com/eee')
+
+        function FetchContainer(url) {
+
+            return function (path) {
+                return fetch(url + path)
+            }
+        }
+        var fetcha = FetchContainer('https://www.baidu.com')
+
+        fetcha("/aaa").then(res => res.json()).then(res => console.log(res))
+        fetcha("/bbb").then(res => res.json()).then(res => console.log(res))
+        fetcha = null
+
+        var fetchb = FetchContainer('https://www.google.com')
+        fetch('/ccc')
+        fetchb = null
+    </script>
+</body>
+
+</html>

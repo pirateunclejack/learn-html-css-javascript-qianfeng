@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="mysearch">
+    <ul id="list"></ul>
+    <script>
+        // https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=37856,36547,37491,37840,37766,37814,37800,36803,37760,37852,26350,37479,37785&wd=f&req=2&csor=1&cb=jQuery1102032297126891873207_1669821968073&_=1669821968074
+        mysearch.oninput = function (evt) {
+            if (!evt.target.value) {
+                list.innerHTML = ''
+                return
+            }
+            // console.log(evt.target.value)
+            var oscript = document.createElement('script')
+            oscript.src = `https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=37856,36547,37491,37840,37766,37814,37800,36803,37760,37852,26350,37479,37785&wd=${evt.target.value}&req=2&csor=1&cb=test&_=1669821968074`
+            document.body.appendChild(oscript)
+            oscript.onload = function () {
+                oscript.remove()
+            }
+        }
+
+        function test(obj) {
+            console.log(obj.g)
+            list.innerHTML = obj.g.map(item =>
+                `<li>${item.q}</li>`
+            ).join('')
+        }
+    </script>
+</body>
+
+</html>

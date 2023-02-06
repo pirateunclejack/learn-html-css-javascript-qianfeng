@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "username": "tiechuiWWERWER",
+      "password": "4321",
+      "id": 3
+    },
+    {
+      "username": "tiechuiWWERWER",
+      "password": "432234234231",
+      "id": 4
+    },
+    {
+      "username": "tiWER",
+      "id": 5
+    },
+    {
+      "username": "tiechui",
+      "password": "4321",
+      "id": 6
+    },
+    {
+      "username": "zhangsan",
+      "password": "jijowjiefjidisojfioei",
+      "id": 7
+    }
+  ],
+  "list": [
+    "111",
+    "222",
+    "333"
+  ]
+}

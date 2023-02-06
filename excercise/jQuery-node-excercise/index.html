@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        var arr = ['111', '222', '333']
+
+        for (var i = 0; i < arr.length; i++) {
+            $(`<li>${arr[i]}
+                <button>Delete</button>
+            </li>`).appendTo($('#list'))
+        }
+        // $('#list button').click(function () {
+        // console.log($(this).parent())
+        // $(this).parent().remove()
+        // })
+
+        $('#list').on('click', 'button', function () {
+            $(this).parent().remove()
+        })
+        // for (var i = 0; i < arr.length; i++) {
+        //     var oli = document.createElement('li')
+        //     oli.innerHTML = arr[i]
+
+        //     var obutton = document.createElement('button')
+        //     obutton.innerHTML = 'delete'
+        //     // obutton.onclick = handler
+        //     oli.appendChild(obutton)
+
+        //     // oli.onclick = function () {
+        //     //   location.href = 'https://www.baidu.com'
+        //     // }
+        //     list.appendChild(oli)
+        // }
+
+        // // function handler(evt) {
+        // //   // console.log(this)
+        // //   console.log(this.parentNode)
+        // //   this.parentNode.remove()
+        // //   evt.stopPropagation()
+        // // }
+
+        // list.onclick = function (evt) {
+        //     console.log(evt.target.nodeName)
+        //     if (evt.target.nodeName === 'BUTTON') {
+        //         evt.target.parentNode.remove()
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  display: flex;
+  width: 500px;
+}
+
+.header li {
+  flex: 1;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.box {
+  position: relative;
+  height: 200px;
+}
+
+.box li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 200px;
+  background-color: yellow;
+  display: none;
+}
+
+.header .active {
+  background-color: red;
+}
+
+.box .active {
+  display: block;
+}

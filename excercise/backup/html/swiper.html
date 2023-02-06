@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .swiper-container {
+    width: 640px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+
+  }
+
+  .swiper-container img {
+    width: 640px;
+    height: 300px;
+  }
+
+  .swiper-slide {
+    float: left;
+
+  }
+
+  .swiper-wrapper {
+    width: 9999px;
+    animation: swiperrun 10s linear 0s infinite;
+  }
+
+  @keyframes swiperrun {
+    0% {
+      transform: translateX(0);
+    }
+
+    5% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-640px);
+    }
+
+    30% {
+      transform: translateX(-640px);
+    }
+
+    50% {
+      transform: translateX(-1280px);
+    }
+
+    55% {
+      transform: translateX(-1280px);
+    }
+
+    75% {
+      transform: translateX(-1920px);
+    }
+
+    80% {
+      transform: translateX(-1920px);
+    }
+
+    100% {
+      transform: translateX(-2560px);
+    }
+  }
+
+  .swiper-wrapper:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../img/docker.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/docker.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/docker.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/docker.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/docker.png" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

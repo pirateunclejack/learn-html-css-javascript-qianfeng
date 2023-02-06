@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      overflow: hidden;
+    }
+
+    li img {
+      float: left;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <!-- <li>
+      <img src="../img/docker.png" alt="">
+      <h3>ijofw</h3>
+      <p>fwefwe</p>
+    </li> -->
+  </ul>
+  <script>
+    var filmList = [
+      {
+        url: "../img/docker.png",
+        title: "docker",
+        grade: "7"
+      },
+      {
+        url: "../img/docker.png",
+        title: "docker",
+        grade: "8"
+      },
+      {
+        url: "../img/docker.png",
+        title: "docker",
+        grade: "9"
+      }
+    ]
+    var fileItems = filmList.map(function (item) {
+      return `
+      <li>
+        <img src="${item.url}" alt="">
+        <h3>${item.title}</h3>
+        <p>${item.grade}</p>
+      </li> 
+      `
+    })
+    console.log(fileItems.join(""))
+    var oul = document.querySelector("ul")
+    oul.innerHTML = fileItems.join("")
+  </script>
+</body>
+
+</html>

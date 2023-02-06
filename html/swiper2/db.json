@@ -1,0 +1,20 @@
+{
+  "banner": [
+    {
+      "id": 1,
+      "imgUrl": "../../img/docker.png",
+      "title": "Pic1"
+    },
+    {
+      "id": 2,
+      "imgUrl": "../../img/docker.png",
+      "title": "Pic2"
+    },
+
+    {
+      "id": 3,
+      "imgUrl": "../../img/docker.png",
+      "title": "Pic3"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    #outer {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+    }
+
+    #center {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    #inner {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="outer">
+    <div id="center">
+      <div id="inner"></div>
+    </div>
+  </div>
+  <script>
+    // inner.onclick = function () {
+    //   console.log('inner')
+    // }
+    // center.onclick = function () {
+    //   console.log('center')
+    // }
+    // outer.onclick = function () {
+    //   console.log('outer')
+    // }
+    // document.body.onclick = function () {
+    //   console.log('document.body')
+    // }
+    // document.documentElement.onclick = function () {
+    //   console.log('document.documentElement')
+    // }
+    // document.onclick = function () {
+    //   console.log('document')
+    // }
+    // window.onclick = function () {
+    //   console.log('window')
+    // }
+    inner.addEventListener('click', function () {
+      console.log('inner')
+    })
+    center.addEventListener('click', function () {
+      console.log('center')
+    })
+    outer.addEventListener('click', function () {
+      console.log('outer')
+    })
+    document.body.addEventListener('click', function () {
+      console.log('body')
+    })
+    document.documentElement.addEventListener('click', function () {
+      console.log('element')
+    })
+    document.addEventListener('click', function () {
+      console.log('document')
+    })
+    window.addEventListener('click', function () {
+      console.log('window')
+    })
+
+
+    inner.addEventListener('click', function () {
+      console.log('inner,catche')
+    }, true)
+    center.addEventListener('click', function () {
+      console.log('center,catche')
+    }, true)
+    outer.addEventListener('click', function () {
+      console.log('outer,catche')
+    }, true)
+    document.body.addEventListener('click', function () {
+      console.log('body,catche')
+    }, true)
+    document.documentElement.addEventListener('click', function () {
+      console.log('element,catche')
+    }, true)
+    document.addEventListener('click', function () {
+      console.log('document,catche')
+    }, true)
+    window.addEventListener('click', function () {
+      console.log('window,catche')
+    }, true)
+
+  </script>
+</body>
+
+</html>

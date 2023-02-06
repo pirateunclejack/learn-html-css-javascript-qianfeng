@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+
+    #child {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">click</button>
+  <button id="btn2">click2</button>
+  <div id="box">
+    <div id="child"></div>
+  </div>
+
+  <script>
+    // mouse 
+    // click 
+
+    // dblclick
+    btn.ondblclick = function () {
+      console.log('dblclick')
+    }
+    // contextmenu
+    btn.oncontextmenu = function () {
+      console.log("contextmenu")
+    }
+    document.oncontextmenu = function () {
+      console.log("mouse right click")
+      return false
+    }
+    // mousedown mouse move mouseup
+    btn2.onmousedown = function () {
+      console.log("mouse down")
+    }
+    btn2.onmousedown = function () {
+      console.log("mouse down")
+    }
+    box.onmousemove = function () {
+      console.log("mouse move")
+    }
+    btn2.onmouseup = function () {
+      console.log("mouse up")
+    }
+
+    // mouseover mouseout
+    function handler(strr) {
+      console.log(strr)
+    }
+
+    // box.onmouseover = function () {
+      // console.log('mouseover')
+    // }
+    // box.onmouseout = function () {
+      // console.log('mouseout')
+    // }
+    // mouseenter mouseleave
+    // box.onmouseenter = function () {
+      // console.log('mouseenter')
+    // }
+    // box.onmouseleave = function () {
+      // console.log('mouseleave')
+    // }
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  div {
+    width: 200px;
+    height: 100%;
+    background: red;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-100%);
+    /* animation: run 1s linear 1 forwards; */
+    animation: run 1s linear 1 forwards reverse;
+  }
+
+  @keyframes run {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<body>
+  <div></div>
+</body>
+
+</html>

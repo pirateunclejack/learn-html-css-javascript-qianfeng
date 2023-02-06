@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="../js/a.js"></script> -->
+  <!-- <script src="../js/b.js"></script> -->
+  <!-- <script src="../js/c.js"></script> -->
+</head>
+
+<body>
+
+  <!-- <script src="../js/module/c.js" type="module"></script> -->
+  <script type="module">
+    import { A1, A2, test as A_test, A_A } from '../js/module/a.js'
+    import { B1, B2, test as B_test, B_B } from '../js/module/b.js'
+    import C from '../js/module/c.js'
+
+    A1()
+    A2()
+    // _a_common()
+    A_test()
+    B_test()
+    C()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <input type="text" required="required" id="mytext">
+    <input type="email" required="required">
+    <input type="submit" value="submi">
+  </form>
+
+  <script>
+    var reg = /a*c/
+    var reg2 = new RegExp('abc')
+    console.log(reg)
+    console.log(reg2)
+
+    mytext.onblur = function () {
+      console.log(mytext.value)
+      console.log(reg.test(mytext.value))
+    }
+  </script>
+</body>
+
+</html>

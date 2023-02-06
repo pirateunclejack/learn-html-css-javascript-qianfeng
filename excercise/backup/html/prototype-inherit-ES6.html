@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box1">
+    <h1></h1>
+    <ul></ul>
+  </div>
+
+  <div class="box2">
+    <h1></h1>
+    <img src="" alt="" style="width: 100px;">
+    <ul></ul>
+  </div>
+
+  <script>
+    var data = {
+      title: 'sports',
+      list: ['sp1', 'sp2', 'sp3']
+    }
+    var data2 = {
+      title: 'zy',
+      url: '../../img/docker.png',
+      list: ['zu1', 'zy2', 'zy3']
+    }
+
+    // function CreateList(select, data) {
+    // this.ele = document.querySelector(select)
+    // this.title = data.title,
+    // this.list = data.list,
+    // this.render = function () {
+    // var h1 = this.ele.querySelector('h1')
+    // var ul = this.ele.querySelector('ul')
+    // console.log(h1, ul)
+    // h1.innerHTML = this.title
+    // ul.innerHTML = this.list.map(item => `<li>${item}</li>`).join('')
+    // }
+    // }
+
+    class CreateList {
+      constructor(select, data = {}) {
+        this.ele = document.querySelector(select)
+        this.title = data.title,
+          this.list = data.list
+        this.render()
+
+      }
+      render() {
+        var h1 = this.ele.querySelector('h1')
+        var ul = this.ele.querySelector('ul')
+        console.log(h1, ul)
+        h1.innerHTML = this.title
+        ul.innerHTML = this.list.map(item => `<li>${item}</li>`).join('')
+
+      }
+    }
+
+    class CreateImgList extends CreateList {
+      constructor(select, data = {}) {
+        super(select, data)
+        this.imgUrl = data.url
+        this.render()
+      }
+      render() {
+        super.render()
+        var img = this.ele.querySelector('img')
+        img.src = this.imgUrl
+      }
+    }
+
+    var obj1 = new CreateList('.box1', data)
+    var obj2 = new CreateImgList('.box2', data2)
+    console.log(obj1)
+
+    console.log(obj1.__proto__ === CreateList.prototype)
+
+  </script>
+</body>
+
+</html>

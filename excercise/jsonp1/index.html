@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mybtn">Jsonp</button>
+    <script>
+        function test(obj) {
+            console.log(obj)
+        }
+        mybtn.onclick = function () {
+            var oscript = document.createElement('script')
+            oscript.src = '01.txt'
+            document.body.appendChild(oscript)
+        }
+    </script>
+    <script>
+        // fetch('')
+        //     .then(res => res.json())
+        //     .then(res => {
+        //         console.log(res)
+        //     })
+
+        function test(obj) {
+            console.log(obj)
+        }
+        test({ "name": "json" })
+    </script>
+    <script>
+        test({
+            "jsonp": "Gotit"
+        })
+    </script>
+    <script src="./01.js"></script>
+    <script src="./01.txt"></script>
+</body>
+
+</html>

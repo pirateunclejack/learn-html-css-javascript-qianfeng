@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./owlcarousel/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="./owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/dist/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <!-- Set up your HTML -->
+    <div class="owl-carousel owl-theme">
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <!-- <div> Your Content </div> -->
+        <div>
+            <img src="../../img/docker.png" alt="">
+        </div>
+        <div>
+            <img src="../../img/docker.png" alt="">
+        </div>
+        <div>
+            <img src="../../img/docker.png" alt="">
+        </div>
+        <div>
+            <img src="../../img/docker.png" alt="">
+        </div>
+        <div>
+            <img src="../../img/docker.png" alt="">
+        </div>
+
+    </div>
+
+
+    <script>
+        var myOwl = $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true
+
+            });
+        });
+        myOwl.on('changed.owl.carousel', function (event) {
+            console.log(event.page.index)
+        })
+    </script>
+</body>
+
+</html>

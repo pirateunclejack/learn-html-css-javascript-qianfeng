@@ -1,0 +1,83 @@
+$isShowTab: true;
+$isRed: true;
+
+@if (isShowTable == true) {
+  .tabbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+// } @else {
+//   // .tabbar {
+//   // }
+// }
+
+div {
+  width: 100px;
+  height: 100px;
+  @if ($isRed == true) {
+    background: red;
+  } @else {
+    background: yellow;
+  }
+}
+
+@for $item from 1 to 5 {
+  li:nth-child(#{$item}) {
+    position: absolute;
+    left: ($item - 1) * 100 px;
+    top: ($item - 1) * 100px;
+  }
+}
+// li:nth-child(1) {
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+// }
+
+// li:nth-child(2) {
+//   position: absolute;
+//   left: 100px;
+//   top: 100px;
+// }
+
+// li:nth-child(1) {
+//   position: absolute;
+//   left: 200px;
+//   top: 200px;
+// }
+
+@for $item from 1 through 5 {
+  li:nth-child(#{$item}) {
+    position: absolute;
+    left: ($item - 1) * 100 px;
+    top: ($item - 1) * 100px;
+  }
+}
+
+$colors: red, green, yellow;
+@each $item in $colors {
+  $index: index($colors, $item);
+  li:nth-child(#{$index}) {
+    background: $item;
+  }
+}
+
+@mixin kerwin_transtion($a: height, $b: 3s) {
+  transition: $a $b;
+  -webkit-transition: $a $b;
+  -moz-transition: $a $b;
+}
+
+.box {
+  @include kerwin_transtion(all, 1s);
+}
+
+.box1 {
+  @include kerwin_transtion(width, 2s);
+}
+
+.box2 {
+  @include kerwin_transtion();
+}

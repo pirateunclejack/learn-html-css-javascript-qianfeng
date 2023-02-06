@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "jifowejeiw",
+      "author": "kerwin"
+    },
+    {
+      "id": 2,
+      "title": "jifosfdwefwefwefwejeiw",
+      "author": "tiechui"
+    }
+  ],
+  "comments": [
+    { "id": 1, "body": "jifwjejfoewj", "newsId": 1 },
+    { "id": 2, "body": "jifwjejfwefwfoewj", "newsId": 1 },
+    { "id": 3, "body": "jifwjejfofwefaewj", "newsId": 2 },
+    { "id": 4, "body": "fwefwefew", "newsId": 2 },
+    { "id": 5, "body": "jifwjejfoeafefaewj", "newsId": 3 },
+    { "id": 6, "body": "jifwjejfoeafsfewefweefaewj", "newsId": 3 }
+  ]
+}

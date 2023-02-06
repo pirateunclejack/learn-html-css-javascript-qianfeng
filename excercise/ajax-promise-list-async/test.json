@@ -1,0 +1,44 @@
+{
+  "list": [
+    {
+      "text": "aefgewfwer",
+      "id": 2
+    },
+    {
+      "text": "wefewf",
+      "id": 3
+    },
+    {
+      "text": "111",
+      "id": 4
+    }
+  ],
+  "looplist": [
+    {
+      "id": 1,
+      "title": "loop-list-1111111"
+    },
+    {
+      "id": 2,
+      "title": "loop-list-2222222"
+    },
+    {
+      "id": 3,
+      "title": "loop-list-3333333"
+    }
+  ],
+  "datalist": [
+    {
+      "id": 1,
+      "title": "data-list-1111111"
+    },
+    {
+      "id": 2,
+      "title": "data-list-2222222"
+    },
+    {
+      "id": 3,
+      "title": "data-list-3333333"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 640px;
+            /* height: 200px; */
+            margin: 100px;
+            border: 5px solid skyblue;
+            display: flex;
+        }
+
+        ul>li {
+            overflow: hidden;
+            width: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <img src="../../img/docker.png" alt="">
+        </li>
+        <li>
+            <img src="../../img/docker.png" alt="">
+        </li>
+        <li>
+            <img src="../../img/docker.png" alt="">
+        </li>
+        <li>
+            <img src="../../img/docker.png" alt="">
+        </li>
+    </ul>
+
+    <script>
+        function limouseover() {
+            $(this).stop().animate({
+                width: 520,
+            }).siblings().stop().animate({
+                width: 40,
+            })
+        }
+        $('ul li').mouseover(limouseover)
+        function ulmouseout() {
+            $('ul li').stop().animate({
+                width: 160
+            })
+            console.log('mouseout')
+            // return false
+        }
+        // $('ul').mouseout(ulmouseout)
+        $('ul').mouseleave(ulmouseout)
+    </script>
+</body>
+
+</html>

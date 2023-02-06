@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    /* #box {
+      height: 100px;
+      background-color: yellow;
+    } */
+
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      color: black;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="box" style="width: 100px;color: black;background-color: green;;">1111</div> -->
+  <div id="box" class="item item2 item1"></div>
+  <button id="btn">button</button>
+  <script>
+
+    console.log(box.className)
+    // box.className = 'item3'
+    // box.className = 'item item2 item2 item3'
+    console.log(box.classList)
+    box.classList.add('item5')
+    box.classList.add('item2')
+    box.classList.remove('item2')
+    box.classList.remove('item1')
+    console.log(box.classList)
+
+    box.classList.toggle('item')
+
+    btn.onclick = function () {
+      box.classList.toggle('item')
+    }
+    // console.log(box.style.width)
+    // console.log(box.style["background-color"])
+    // console.log(box.style.backgroundColor)
+    // box.style.width = '200px'
+    // box.style['background-color'] = 'red'
+
+    // console.log(window.getComputedStyle(box))
+    // var obox = document.getElementById('box')
+    // var res = window.getComputedStyle(obox).height
+    // var res = window.getComputedStyle(obox).width
+    // var res = window.getComputedStyle(obox)['background-color']
+    // console.log(res)
+  </script>
+</body>
+
+</html>

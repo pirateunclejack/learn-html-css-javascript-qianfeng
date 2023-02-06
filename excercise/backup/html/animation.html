@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    background: red;
+    animation: kerwinrun2 2s linear 1s infinite;
+  }
+
+  @keyframes kerwinrun1 {
+    from {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    to {
+      width: 400px;
+      height: 600px;
+      background-color: green;
+    }
+  }
+
+  @keyframes kerwinrun2 {
+    0% {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    25% {
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+    }
+
+    50% {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    75% {
+      width: 400px;
+      height: 400px;
+      background-color: red;
+    }
+
+    100% {
+      width: 600px;
+      height: 600px;
+      background-color: green;
+    }
+  }
+</style>
+
+<body>
+  <div></div>
+</body>
+
+</html>

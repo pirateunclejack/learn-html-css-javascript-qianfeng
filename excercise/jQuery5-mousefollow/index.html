@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 200px;
+            height: 50px;
+            background-color: yellow;
+            position: relative;
+
+        }
+
+        #child {
+            width: 200px;
+            height: 50px;
+            background-color: yellow;
+            position: relative;
+
+        }
+
+        #box p {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 100;
+            top: 1000;
+            display: none;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        Kerwin img
+        <p>
+            kerwin value
+        </p>
+    </div>
+
+    <div id="child">9182389283</div>
+    <script>
+        // box.onmouseover = function () {
+        //     console.log(this.firstElementChild.style.display = 'block')
+        // }
+        // box.onmouseout = function () {
+        //     console.log(this.firstElementChild.style.display = 'none')
+        // }
+        // box.onmousemove = function (evt) {
+        //     console.log(evt.offsetX, evt.offsetY)
+        //     // this.firstElementChild.style.left = evt.offsetX + 50 + 'px'
+        //     // this.firstElementChild.style.top = evt.offsetY + 50 + 'px'
+        //     this.firstElementChild.style.left = evt.offsetX + 'px'
+        //     this.firstElementChild.style.top = evt.offsetY + 'px'
+
+        // }
+
+        function boxmouseover() {
+            $(this).children('p').css('display', 'block')
+        }
+        function boxmouseout() {
+            $(this).children('p').css('display', 'none')
+
+        }
+        function boxmousemove(evt) {
+            $(this).children('p').offset({
+                left: evt.pageX,
+                top: evt.pageY
+            })
+        }
+        $('#box').mouseover(boxmouseover).mouseout(boxmouseout)
+        $('#box').mousemove(boxmousemove)
+    </script>
+</body>
+
+</html>

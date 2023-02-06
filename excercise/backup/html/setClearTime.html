@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <button id="btn1">clearTimeout</button>
+  <button id="btn2">clearInterval</button>
+
+  <script>
+    var time1 = setTimeout(function () {
+      console.log("time")
+    }, 10000)
+
+    var time2 = setInterval(function () {
+      console.log(new Date())
+    }, 1000)
+
+    console.log(time1, time2)
+
+    btn1.onclick = function () {
+      console.log('clearTimeout')
+      clearTimeout(time1)
+    }
+
+    btn2.onclick = function () {
+      console.log('clearInterval')
+      clearInterval(time2)
+    }
+
+
+
+  </script>
+
+
+</body>
+
+</html>

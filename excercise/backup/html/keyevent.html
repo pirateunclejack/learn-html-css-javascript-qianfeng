@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="username">
+  <form action="" id="myform">
+    <input type="text" id="username2">
+    <input type="reset">
+    <input type="submit">
+  </form>
+
+  <script>
+    // keydown
+    username.onkeydown = function () {
+      console.log('keydown')
+    }
+    // keyup
+    username.onkeyup = function () {
+      console.log('keyup')
+    }
+
+    // focus blur
+    username.onfocus = function () {
+      console.log('focus')
+    }
+    username.onblur = function () {
+      console.log('blur')
+    }
+    // change 
+    username.onchange = function () {
+      console.log('change')
+    }
+    // submit reset
+    myform.onsubmit = function () {
+      console.log('submit', 'check content')
+      return false
+    }
+    myform.onreset = function () {
+      console.log('reset')
+    }
+
+  </script>
+</body>
+
+</html>

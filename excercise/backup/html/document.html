@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="box" class="123">123
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div id="box" class="123">123
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+  <div id="box" class="123">123</div>
+  <div id="box" class="123">123</div>
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <ul>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+    <li class="ulli">1</li>
+  </ul>
+  <script>
+    // console.log(box)
+    // box.innerHTML = '11111'
+    // console.log(document.documentElement)
+    // console.log(document.head)
+    // console.log(document.body)
+    // console.log(document.getElementById('box'))
+    // var obox = document.getElementById('box')
+    // obox.innerHTML = 'ajofoiejoij'
+    var items = document.getElementsByClassName('123')
+    console.log(items)
+    items[0].innerHTML = ('12312312312')
+    for (var i = 0; i < items.length; i++) {
+      items[i].innerHTML = 'news-' + i
+    }
+    var newItems = Array.from(items)
+    console.log(newItems.filter)
+
+    var items = document.getElementsByTagName('div')
+    console.log(items)
+
+    var item = document.getElementsByName('username')
+    console.log(item)
+    item[0].value = 'Kerwin'
+
+    var item = document.querySelector("ul li")
+    console.log(item)
+
+    var item = document.querySelectorAll("ul li.ulli")
+    console.log(item)
+
+  </script>
+</body>
+
+</html>

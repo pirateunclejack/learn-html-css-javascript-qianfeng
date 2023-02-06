@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0%;
+
+    }
+
+    form>p>span:nth-child(1).active {
+      background-color: red;
+    }
+
+    form>p>span:nth-child(2).active {
+      background-color: yellow;
+    }
+
+    form>p>span:nth-child(3).active {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <label for="">
+      <input type="text" name="password">
+    </label>
+    <p>
+      <span>weak</span>
+      <span>middle</span>
+      <span>strong</span>
+    </p>
+  </form>
+
+  <script>
+
+    var oinput = document.querySelector('input')
+    var ospan = document.querySelectorAll('span')
+
+    var reg1 = /\d/
+    var reg2 = /[a-z]/
+    var reg3 = /[!@#$%^&*()_+=-]/
+
+
+    oinput.oninput = function (evt) {
+      // console.log(this.value)
+      var level = 0
+      console.log(evt.target.value)
+      if (reg1.test(this.value)) { level++ }
+      if (reg2.test(this.value)) { level++ }
+      if (reg3.test(this.value)) { level++ }
+      console.log(level)
+
+      for (var i = 0; i < ospan.length; i++) {
+        ospan[i].classList.remove("active")
+
+        if (i < level) {
+          ospan[i].classList.add("active")
+        }
+      }
+    }
+
+
+
+    // One number
+    // var reg = /\d\d/
+
+    // One not number
+    // var reg = /\D/
+
+    // One space
+    // var reg = /\s/
+
+    // One none space
+    // var reg = /\S/
+
+    // One letter number _
+    // var reg = /\w/
+
+    // One none letter number _
+    // var reg = /\W/
+
+    // One any
+    // reg = /./
+
+    // convert /
+    // reg = /\d\.\d/
+
+    // reg = /^\d/
+    // reg = /\d$/
+
+    // * 0-n
+    // reg = /\d\d*/
+
+    // + at least onece
+    // reg = /\d+/
+
+    // ? 0/1
+    // reg = /\d\d?/
+
+    // {n} n times
+    // reg = /\d\d{2}/
+
+    // {n,} >= n times
+    // reg = /\d\d{2,}/
+
+    // {n,m}
+    // reg = /\d\d{2,3}/
+
+    // (***){n}
+    // reg = /(\d\d){2,3}/
+
+    // | or
+    // reg = /a|b{2,3}/
+    // reg = /(abc|def)/
+    // reg = /abc|def|ghi/
+
+    // [] [a-zA-Z0-9]
+    // reg = /[abcdef]{2,3}/
+
+    // [^***]
+    // reg = /[^abc]/
+
+    // exec
+    // reg = /\d{3}/
+    //
+    // console.log(reg.test('ab c'))
+    // console.log(reg.test('123'))
+    // console.log(reg.test('12'))
+    // console.log(reg.exec('123345'))
+    // console.log(reg.test('1'))
+    // console.log(reg.test(' '))
+    // console.log(reg.test(' _'))
+    // console.log(reg.test('**'))
+    // console.log(reg.test('\n'))
+    // console.log(reg.test('1.2'))
+    // console.log(reg.test('2.3'))
+    // console.log(reg.exec('2.3'))
+    // console.log(reg.exec('abcef'))
+    // console.log(reg.exec('abdef'))
+    // console.log(reg.exec('ab3ef'))
+    // console.log(reg.test('ab'))
+
+
+    // // var reg = /\d{4}-\d{1,2}-\d{1,2}/
+    // var reg = /(\d{4})-(\d{1,2})-(\d{1,2})/g
+    // // var reg1 = /\d{4}(-\d{1,2}){2}/g
+    // // var reg2 = /\d{4}(-\d{1,2}){2}/g
+    // var datestr = 'Time is 2029-01-01 2020-23-32'
+    // newdatestr1 = reg.exec(datestr)
+    // newdatestr2 = reg.exec(datestr)
+    // console.log(newdatestr1)
+    // console.log(newdatestr2)
+    // console.log(newdatestr1[0].split('-').join('/'))
+    // console.log(newdatestr2[0].split('-').join('/'))
+
+    // // myreg = /[a-z]/i
+    // myreg = /[a-z]/i
+    // console.log(myreg.test('AA'))
+
+    // reg = /\d{1,4}?/
+    // console.log(reg.exec('aa1234bb1234'))
+
+    // var str = `<p class='active'><span>kerwin</span></p>`
+    // var myreg = /<p.*?>/
+    // console.log(myreg.exec(str))
+    //
+    //
+    // var str = 'adearfa'
+    //
+    // var newstr = str.replace('a', 'd')
+    // var newstr = str.replace(/a/g, '*')
+    // console.log(newstr)
+
+    // console.log(str.search('a'))
+    // console.log(str.search(/a/))
+    // console.log(str.search(/ax/))
+    //
+    // console.log(str.match('ad'))
+    // console.log(str.match())
+    // console.log(str.match('kerwin'))
+
+    // var datestr = 'Time is 2029-01-01 2020-23-32'
+    // // var reg = /\d{4}-\d{1,2}-\d{1,2}/
+    // var reg = /\d{4}-\d{1,2}-\d{1,2}/g
+    // // var reg = /(\d{4})-(\d{1,2})-(\d{1,2})/
+
+    // console.log(datestr.match(reg))
+
+
+
+
+  </script>
+</body>
+
+</html>

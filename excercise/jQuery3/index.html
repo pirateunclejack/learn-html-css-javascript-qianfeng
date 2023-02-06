@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>111 <button>111</button></li>
+        <li>222 <button>222</button></li>
+        <li>333 <button>333</button></li>
+        <li>444 <button>444</button></li>
+    </ul>
+    <div></div>
+    <script>
+        function ulclick(e) {
+            // console.log('ulclick')
+            // console.log(this)
+            // this.parentNode.remove()
+            console.log(e)
+        }
+        function liclick() {
+            console.log('liclick')
+        }
+        function ulmouseover(e) {
+            console.log('ulmouseover', e)
+        }
+        function A() {
+            console.log('A')
+        }
+        function B() {
+            console.log('B')
+        }
+
+        // function ulmouseout(){
+        //
+        // }
+        function divmousedown() {
+            console.log('down')
+            // document.onmousemove = function () {
+            // console.log('move')
+            // }
+            $(document).mousemove(function () {
+                console.log('move')
+            })
+
+
+        }
+        function divmouseup() {
+            console.log('up')
+            // document.onmousemove = null
+            $(document).off('mousemove')
+        }
+
+        // $('ul').on('click', ulclick)
+        // $('ul li').on('click', liclick)
+
+        // $('ul').on('click', 'button', ulclick)
+        // $('ul').on('click', 'button', {
+        // mame: 'kerwin'
+        // }, ulclick)
+        $('ul').on('click', 'button', 'hello', ulclick)
+        // $('ul').one('click', 'button', 'hello', ulclick)
+        // $('ul').click(ulclick).mouseover(ulmouseover)
+        // $('ul').click({ name: 'kerwin' }, ulclick).mouseover(ulmouseover)
+
+        $('ul').off('click')
+        $('ul').off('mouseover')
+        $('ul').off()
+
+        $('div').mousedown(divmousedown).mouseup(divmouseup)
+
+        $('div').on('click', A).on('click', B)
+        $('div').off('click', A)
+    </script>
+</body>
+
+</html>

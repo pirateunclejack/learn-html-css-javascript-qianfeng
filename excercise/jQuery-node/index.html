@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <div>111111111</div>
+        <div>111111111</div>
+        <p>pppppp</p>
+        <span>sssssssss</span>
+        <div>dddddddddddd</div>
+
+        <div id="center">line
+            <hr>
+        </div>
+        <ul>
+            <li>jifjeojfioe</li>
+        </ul>
+    </div>
+
+    <script>
+        // var odiv = $('<div>Hello first kerwin create div</div>')
+        // var odiv = $('<div>').html('<b>Hello b</b>').addClass('kerwin').css('background', 'red').appendTo($('#box'))
+        var odiv = $('<div>').html('<b>Hello b</b>').addClass('kerwin').css('background', 'red')
+        // odiv.appendTo($('#box'))
+        // odiv.prependTo($('#box'))
+        // $('#box').append(odiv)
+        // $('#box').prepend(odiv)
+
+        // $('#box').before(odiv)
+        // odiv.insertBefore($('#box'))
+        // $('#box').after(odiv)
+        // odiv.insertAfter($('#box'))
+
+        // $('#box div').eq(0).remove()
+        // $('#box div').eq(0).empty()
+        // $('#box div').html('')
+
+        // $('#box span').replaceWith(odiv)
+        // odiv.replaceAll($('#box p'))
+        $('#box').click(function () {
+            console.log('box')
+        })
+        $('#box ul').click(function () {
+            console.log('box ul')
+        })
+
+        $('#box').clone(true, true).prop('id', 'box2').css('color', 'red').insertAfter($('#center'))
+        // $('#box').clone(true, false).prop('id', 'box2').css('color', 'red').insertAfter($('#center'))
+        // $('#box').clone(false, false).prop('id', 'box2').css('color', 'red').insertAfter($('#center'))
+
+    </script>
+</body>
+
+</html>

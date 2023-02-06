@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display: block;
+  }
+
+  .box {
+    width: 350px;
+    border: 5px solid red;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  img,
+  p,
+  h2 {
+    transition: all 1s;
+  }
+
+  .box .pic {
+    height: 400px;
+    width: 100%;
+    transition: all 1s;
+  }
+
+  .box:hover .pic {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+
+
+  .box h2 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    color: white;
+    transform: translateY(-200px);
+  }
+
+  .box:hover h2 {
+    /* left: 100px; */
+    transform: translateX(100px);
+    transform: translateY(0px);
+  }
+
+  .box p {
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    color: white;
+    /* background: darkblue; */
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .box:hover p {
+    transform: translateY(-80px);
+    opacity: 1;
+  }
+
+  .box .musicbtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    animation: run 2s linear infinite;
+  }
+
+  @keyframes run {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+
+    }
+  }
+</style>
+
+
+<body>
+  <div class="box">
+    <img src="../img/item.png" alt="" class="pic">
+    <div>
+      <h2>title</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque beatae amet fugit molestiae,
+        aperiam rerum deserunt sapiente quidem rem, suscipit dolores molestias, autem harum reiciendis dolore ea. Error,
+        provident tenetur.</p>
+    </div>
+    <img src="../img/search.png" alt="" class="musicbtn">
+  </div>
+</body>
+
+</html>

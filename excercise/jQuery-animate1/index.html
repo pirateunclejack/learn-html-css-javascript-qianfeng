@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="myshow">Show</button>
+    <button id="myhide">Hide</button>
+    <button id="mytoggle">Switch</button>
+    <button id="myfadeto">Fade to</button>
+    <button id="myanimate">Animate</button>
+    <button id="mystop">Stop</button>
+    <button id="myfinish">Finish</button>
+    <div id="box"></div>
+    <script>
+        // $('#myshow').click(function () {
+        //     $('#box').show(1000, 'linear', () => {
+        //         console.log('Show')
+        //     })
+        // })
+        // $('#myhide').click(function () {
+        //     $('#box').hide(1000, 'swing', () => {
+        //         console.log('Hide')
+        //     })
+        // })
+        // $('#mytoggle').click(function () {
+        //     $('#box').toggle(1000, 'swing', () => {
+        //         console.log('Toggle ')
+        //     })
+        // })
+        // $('#myshow').click(function () {
+        //     $('#box').slideDown(1000, 'linear', () => {
+        // <button id="mystop">Stop</button>
+        //         console.log('Show')
+        //     })
+        // })
+        // $('#myhide').click(function () {
+        //     $('#box').slideUp(1000, 'swing', () => {
+        //         console.log('Hide')
+        //     })
+        // })
+        // $('#mytoggle').click(function () {
+        //     $('#box').slideToggle(1000, 'swing', () => {
+        //         console.log('SlideToggle')
+        //     })
+        // })
+        $('#myshow').click(function () {
+            $('#box').fadeIn(1000, 'linear', () => {
+                console.log('Show')
+            })
+        })
+        $('#myhide').click(function () {
+            $('#box').fadeOut(1000, 'swing', () => {
+                console.log('Hide')
+            })
+        })
+        $('#mytoggle').click(function () {
+            $('#box').fadeToggle(1000, 'swing', () => {
+                console.log('SlideToggle')
+            })
+        })
+        $('#myfadeto').click(function () {
+            $('#box').fadeTo(1000, 0.1, 'swing', () => {
+                console.log('SlideToggle')
+            })
+        })
+        $('#myanimate').click(function () {
+            $('#box').animate({
+                left: '100px',
+                top: 100,
+                borderRadius: "150px",
+                background: 'red',
+
+            },
+                1000, 'linear', () => {
+                    console.log('Animate')
+                })
+        })
+        $('#mystop').click(function () {
+            $('#box').stop().animate({
+                left: '100px',
+                top: 100,
+                borderRadius: "150px",
+                background: 'red',
+
+            },
+                1000, 'linear', () => {
+                    console.log('Animate')
+                })
+        })
+        $('#myfinish').click(function () {
+            $('#box').finish().animate({
+                left: '300px',
+            },
+                1000, 'linear', () => {
+                    console.log('Animate')
+                })
+        })
+
+    </script>
+</body>
+
+</html>

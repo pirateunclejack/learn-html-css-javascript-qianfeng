@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <button id="btn">save my username</button>
+  <button id="btn2">get my username</button>
+  <button id="btn3">delete my username</button>
+  <button id="btn4">clear my username</button> -->
+  <div>Username: <input type="text" id="username"></div>
+  <div>Password: <input type="password" id="password"></div>
+  <div><button id="login">Login</button></div>
+
+  <script>
+    var uservalue = localStorage.getItem('username')
+    var passvalue = localStorage.getItem('password')
+    if (uservalue && passvalue) {
+      username.value = localStorage.getItem('username')
+      password.value = localStorage.getItem('password')
+    }
+    login.onclick = function () {
+      localStorage.setItem('username', username.value)
+      localStorage.setItem('password', password.value)
+      console.log('1111')
+    }
+    // btn.onclick = function () {
+    //   localStorage.setItem('name', 'kerwin')
+    //   localStorage.setItem('name2', 'erwin')
+    //   localStorage.setItem('Kerwin', JSON.stringify({ 'name': 'Kerwin', 'age': 32 }))
+    // }
+    // btn2.onclick = function () {
+    //   console.log(localStorage.getItem('Kerwin'))
+    // }
+    // btn3.onclick = function () {
+    //   console.log(localStorage.removeItem('name'))
+    // }
+    // btn4.onclick = function () {
+    //   localStorage.clear()
+    // }
+    // btn.onclick = function () {
+    //   sessionStorage.setItem('name', 'kerwin')
+    //   sessionStorage.setItem('name2', 'erwin')
+    //   sessionStorage.setItem('Kerwin', JSON.stringify({ 'name': 'Kerwin', 'age': 32 }))
+    // }
+    // btn2.onclick = function () {
+    //   console.log(JSON.parse(sessionStorage.getItem('Kerwin')))
+    // }
+    // btn3.onclick = function () {
+    //   console.log(sessionStorage.removeItem('name'))
+    // }
+    // btn4.onclick = function () {
+    //   sessionStorage.clear()
+    // }
+
+  </script>
+</body>
+
+</html>

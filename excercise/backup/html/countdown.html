@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div id="box"></div>
+
+  <script>
+    var currentDate = new Date()
+    var targetDate = new Date('2022/10/29')
+    console.log(currentDate - targetDate)
+    function diffTime(current, target) {
+      var sub = Math.ceil((target - current) / 1000)
+      var day = parseInt(sub / 3600 / 24)
+      var hours = parseInt(sub % (3600 * 24) / (60 * 60))
+      var minutes = parseInt(sub % (3600) / 60)
+      var seconds = sub % (60)
+      var obj = {
+        day: day,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      }
+
+      return obj
+    }
+    setInterval(function () {
+      var currentDate = new Date()
+      var res = diffTime(targetDate, currentDate)
+      box.innerHTML = `day: ${res.day}; hours: ${res.hours}; minutes: ${res.minutes}; seconds: ${res.seconds} <br>`
+
+    }, 1000) 
+  </script>
+
+
+</body>
+
+</html>

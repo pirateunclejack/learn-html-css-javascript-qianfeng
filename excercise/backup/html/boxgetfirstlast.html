@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .header {
+      display: flex;
+    }
+
+    .header li {
+      flex: 1;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .box {
+      position: relative;
+    }
+
+    .box li {
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      height: 100px;
+      width: 250px;
+      background-color: yellow;
+      display: none;
+    }
+
+    .header .active {
+      background-color: red;
+    }
+
+    .box .active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div>hello</div>
+  <div id="box" index='1'>
+    Kerwin
+    <p>111111</p>
+    <p>2222</p>
+    <!-- jfowejfi -->
+  </div>
+  <div>jofjweoifjio</div>
+  <script>
+    // console.log(box.childNodes)
+    // console.log(box.children)
+    // console.log(box.firstChild)
+    // console.log(box.firstElementChild)
+    // console.log(box.lastChild)
+    // console.log(box.lastElementChild)
+    // console.log(box.previousSibling)
+    // console.log(box.previousElementSibling)
+    // box.previousElementSibling.innerHTML = 'world'
+    // console.log(box.nextSibling)
+    // console.log(box.nextElementSibling)
+    // box.nextElementSibling.dataset.index = '1'
+    // console.log(box.parentNode)
+    // console.log(box.parentElement)
+    // console.log(box.getAttribute('index'))
+
+    console.log(box.attributes['index'])
+    console.log(box.attributes[1])
+
+
+  </script>
+</body>
+
+</html>

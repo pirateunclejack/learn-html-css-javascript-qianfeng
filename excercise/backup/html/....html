@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+  </ul>
+  <h1>change</h1>
+  <input type="text" id="myusername">
+  <input type="number" id="myage">
+  <button id="btn">Change</button>
+  <div id="box">
+
+  </div>
+  <script>
+    var obj = {
+      name: 'kerwin',
+      age: 100,
+      location: 'jifowiej',
+      id: 'fojwoejfoiejwoifjijewjweoiji'
+    }
+    function render({ name, age, location }) {
+      // function render(obj) {
+      // console.log(obj)
+      // var {name,age,location} = obj
+      box.innerHTML = `name:${name}, age:${age}, location:${location}`
+    }
+    render(obj)
+    btn.onclick = function () {
+      // console.log(myusername.value)
+      // console.log(myage.value)
+      var name = myusername.value || obj.name
+      var age = myage.value || obj.age
+
+      var newobj = {
+        ...obj,
+        name,
+        age,
+      }
+      console.log(newobj)
+      render(newobj)
+    }
+    // var a = [1, 2, 3]
+    // var b = [4, 5, 6]
+    // console.log(a.concat(b))
+    // var c = [a, b]
+    // var c = [...a, ...b]
+    // console.log(c)
+
+    // var a = [1, 2, 3]
+    // var b = [...a]
+    // b[0] = 'kerwin'
+    // console.log(b)
+
+    // var test = (...arr) => {
+    // console.log(arr)
+    // }
+    // var test = function (...arr) {
+    // console.log(arr)
+    // }
+    //
+    // var test = (a, b, ...arr) => {
+    // console.log(arr)
+    // }
+    //
+    // test(1, 2, 3, 4, 5)
+
+    // var arr = [1, 2, 3]
+    // var test = function (a, b, c) {
+    // console.log(a, b, c)
+    // }
+    // test(...arr)
+    //
+    // var res = Math.max(...arr)
+    // console.log(res)
+    // function test() {
+    // console.log(...arguments)
+    // }
+    // function test() {
+    // var arr = Array.from(arguments)
+    // console.log(arr)arguments
+    // }
+
+    // test(1, 2, 3, 4)
+    //
+    // var oli = document.querySelectorAll('li')
+    // var oliarr = [...oli]
+    // console.log(oliarr)
+
+    // var obj1 = {
+      // name: 'kerwin',
+      // age: 12
+    // }
+    // var obj2 = {
+      // name: 'jfojwioejrfoieio',
+      // location: 'jijfie'
+    // }
+// 
+    // var obj = {
+      // ...obj1,
+      // ...obj2
+    // }
+// 
+    // console.log(obj)
+  </script>
+</body>
+
+</html>

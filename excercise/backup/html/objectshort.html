@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <input type="text" id="mytext"> -->
+  <input type="text" id="myusername">
+  <input type="password" id="mypassword">
+  <button id="mybtn">login</button>
+
+  <script>
+    mybtn.onclick = function () {
+      let username = myusername.value
+      let password = mypassword.value
+      console.log(username, password)
+
+      // var obj = {
+      // username: username,
+      // password: password,
+      // }
+      var obj = {
+        username,
+        password,
+      }
+
+      console.log('jofwoie', obj)
+    }
+
+    // var obj2 = {
+    // a: 1,
+    // getName: function () {
+    // console.log(this.a)
+    // }
+    // }
+    var obj2 = {
+      a: 1,
+      getName() {
+        console.log(this.a)
+      }
+    }
+    // 
+    obj2.getName()
+    // var test1 = function () {
+    // console.log("1111")
+    // }
+    //
+    // var test2 = () => {
+    // console.log(12323434)
+    // }
+    // test2()
+    //
+    // let test = a => {
+    // console.log(111, a)
+    // }
+    //
+    // test('kerwin')
+    //
+    // let test2 = (a, b) => {
+    // console.log(111, a, b)
+    // }
+    //
+    // test2('kerwin', 'kerwindwoo')
+
+    // var test = a => 100 * a
+    //
+    // console.log(test(100))
+
+    // var list = ['111', '11223', 'iwejrio']
+    // var newlist = list.map(function (item) {
+    // return `<li>${item}</li>`
+    // })
+    // var newlist = list.map(item => `<li>${item}</li>`)
+    //
+    // console.log(newlist.join(''))
+
+    // var test = () => {
+    // return {
+    // name: 'kerwin'
+    // }
+    // }
+    // var test = () => (
+    // {
+    // name: 'kerwin'
+    // }
+    // )
+    //
+    // console.log(test())
+
+    // var test = function (a, b, c) {
+    // console.log(a, b, c)
+    // }
+    // var test = function () {
+    // console.log(arguments[0], arguments[1], arguments[2])
+    // console.log(Array.from(arguments))
+    // }
+    // var test = function () {
+    // console.log(arguments[0], arguments[1], arguments[2])
+    // console.log(Array.from(arguments))
+    // }
+    //
+    // test(1, 2, 3)
+
+    // mytext.oninput = function () {
+    // console.log(this.value)
+    // setTimeout(function () {
+    // console.log(this)
+    // }, 1000)
+    // }
+
+    // mytext.oninput = function () {
+    // console.log(this.value)
+    // var that = this
+    // setTimeout(function () {
+    // console.log(that.value)
+    // }, 1000)
+    // }
+    // mytext.oninput = function () {
+    // console.log(this.value)
+    // setTimeout(() => {
+    // console.log(this.value)
+    // }, 1000)
+    // }
+    //
+
+    // function test(a = 1, b = 2) {
+    // return a + b
+    // }
+    // console.log(test(1, 2))
+    // console.log(test())
+
+    // var test = (a = 1, b = 2) => {
+    // return a + b
+    // }
+    // console.log(test(1, 2))
+    // console.log(test())
+
+    // var arr = ['xiaoming', 'jfowjie', 'jiofwjoej']
+    // let [x, y, z] = arr
+    // console.log(x, y, z)
+// 
+    // var a = 10
+    // var b = 20
+    // var [b, a] = [a, b]
+// 
+    // var arr2 = [['jifejie', 'jfiewofe'], 'jifwojef', ['jifwoeij', 'jifwjoeijf']]
+    // console.log(arr2[0][1])
+    // var [[p, j], l, [b, n]] = arr2
+// 
+    // var obj = {
+      // name: 'kerwin',
+      // age: 100,
+      // location: 'jifjwi'
+    // }
+// 
+    // let { name, age: myage, location: location0 } = obj
+// 
+    // document.write(name)
+    // document.write(myage)
+    // document.write(location0)
+// 
+    // document.write(obj.name)
+    // document.write(obj.age)
+    // document.write(obj.location)
+// 
+    // var obj2 = {
+      // name: 'jifejf',
+      // age: 22,
+      // location: {
+        // city: 'jifwji',
+        // town: 'jfiwjeij'
+      // },
+      // hobby: ['jfiwo', 'lkjfiwo', 'jfowji']
+    // }
+// 
+    // var {
+      // name2,
+      // age,
+      // location: {
+        // provice,
+        // town
+      // },
+      // hobby: [a, b, c]
+    // } = obj2
+// 
+
+
+  </script>
+</body>
+
+</html>

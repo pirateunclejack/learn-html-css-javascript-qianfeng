@@ -1,0 +1,26 @@
+// div {
+//   width: 100px;
+//   height: 100px;
+//   background-color: yellow;
+// }
+
+$color: skyblue;
+$width: 100px;
+
+.box {
+  background: $color;
+}
+
+.box2 {
+  background: $color;
+  width: $width * 2;
+}
+
+.box2 {
+  background: $color;
+  width: $width / 2;
+}
+
+.footer {
+  border-top: 1px solid $color;
+}

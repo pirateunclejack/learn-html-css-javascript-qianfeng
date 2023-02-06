@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="checkbox" id="all">Select All
+  <hr>
+  <ul class="shop">
+    <li>
+      <input type="checkbox">items1
+    </li>
+    <li>
+      <input type="checkbox">items1
+    </li>
+    <li>
+      <input type="checkbox">items1
+    </li>
+    <li>
+      <input type="checkbox">items1
+    </li>
+  </ul>
+
+  <script>
+    var oAll = document.getElementById('all')
+    var oItems = document.querySelectorAll('.shop input')
+    console.log(oItems)
+    oAll.onclick = function () {
+      console.log(oAll.checked)
+      for (var i = 0; i < oItems.length; i++) {
+        oItems[i].checked = oAll.checked
+      }
+    }
+    for (var i = 0; i < oItems.length; i++) {
+      oItems[i].onclick = function () {
+        var count = 0
+        for (var i = 0; i < oItems.length; i++) {
+          if (oItems[i].checked === true) {
+            count++
+          }
+          if (count === oItems.length) {
+            oAll.checked = true
+          } else {
+            oAll.checked = false
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

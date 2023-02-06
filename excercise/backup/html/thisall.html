@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="box">ojo1i23</div>
+  <button id="btn">jfiwoi</button>
+  <script>
+    var obj1 = {
+      name: 'obj1',
+      getName: function (a, b, c) {
+        console.log('getName', this.name)
+        console.log(a, b, c)
+      }
+    }
+    obj1.getName()
+
+    var obj2 = {
+      name: 'obj2',
+      getName: function () {
+        console.log('getName', this.name)
+      }
+    }
+    obj2.getName()
+
+    obj1.getName.call(obj2)
+
+    obj1.getName.apply(obj2)
+
+    obj1.getName.call(obj2, 1, 2, 3)
+    obj1.getName.apply(obj2, [1, 2, 3])
+
+    var name = '1111111111111'
+    obj1.getName.call(window)
+
+
+    obj1.getName.bind(obj2)
+    var fun1 = obj1.getName.bind(obj2)
+    console.log(fun1)
+    fun1()
+
+    btn.onclick = handler.bind(window)
+    function handler() {
+      console.log(1111, this)
+    }
+
+    // function test() {
+    // console.log(this)
+    // }
+    //
+    // test()
+
+    // obj = {
+    // name: 'Kerwin',
+    // test: function () {
+    // console.log('jiowjoiejf', this.name)
+    // }
+    // }
+    //
+    // console.log(obj.test)
+    // obj.test()
+
+    // setTimeout(function () {
+    // console.log(111, this)
+    // }, 2000)
+
+    // setInterval(function () {
+    // console.log(111, this)
+    // }, 2000)
+    // box.onclick = function () {
+    // console.log(this)
+    // }
+    // box.addEventListener('click', function (evt) {
+      // console.log(evt.target)
+      // console.log('1111', this)
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mybtn">Jsonp</button>
+    <script>
+        function test(obj) {
+            console.log(obj)
+        }
+        mybtn.onclick = function () {
+            var oscript = document.createElement('script')
+            oscript.src = 'https://www.runoob.com/try/ajax/jsonp.php?jsonacallback=test'
+            document.body.appendChild(oscript)
+
+            oscript.onload = function () {
+                oscript.remove()
+            }
+        }
+    </script>
+
+</body>
+
+</html>

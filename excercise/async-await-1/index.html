@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+
+        import { ajax, pajax } from './utils.js'
+        // console.log(111)
+        // async function test() {
+        // var res = await pajax({
+        // url: 'http://localhost:3000/news',
+        // data: {
+        // author: 'kerwin'
+        // }
+        // })
+        // console.log(res)
+        // return res
+        // var res1 = await pajax({
+        // url: 'http://localhost:3000/comments',
+        // data: {
+        // newsId: res[0].id
+        // }
+        // })
+        // console.log(res1)
+        // }
+        // 
+        // test().then(res => {
+        // console.log(res)
+        // }).catch(err => {
+        // console.log(err)
+        // })
+        // console.log(3333)
+        async function test() {
+            try {
+                var res = await pajax({
+                    url: 'http://localhost:3000/news',
+                    data: {
+                        author: 'kerwin'
+                    }
+                })
+                console.log(res)
+                return res
+                var res1 = await pajax({
+                    url: 'http://localhost:3000/comments',
+                    data: {
+                        newsId: res[0].id
+                    }
+                })
+                console.log(res1)
+            } catch (err) {
+                console.log("err:", err)
+            }
+        }
+
+        test().then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+    </script>
+</body>
+
+</html>

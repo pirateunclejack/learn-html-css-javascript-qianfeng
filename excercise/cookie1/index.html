@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="savebtn">Save Cookie</button>
+    <button id="getbtn">Get Cookie</button>
+    <button id="delbtn">Delete Cookie</button>
+    <script>
+        savebtn.onclick = function () {
+            // document.cookie = 'username=kerwin;path=/cookie-aaa'
+            var date = new Date()
+            // date.getDate()
+            // date.getMinutes()
+            // date.getMinutes() + 1
+            date.setMinutes(date.getMinutes() + 1)
+            // date.getMinutes()
+            document.cookie = `username=kerwin;expires=${date.toUTCString()}`
+            document.cookie = 'password=123'
+        }
+        getbtn.onclick = function () {
+            // document.cookie
+            // console.log(document.cookie)
+            getCookie()
+        }
+        function getCookie(key) {
+            var str = document.cookie
+            var arr = str.split(';')
+            // console.log(arr)
+            var obj = {}
+            for (var i = 0; i < arr.length; i++) {
+                var subArr = arr[i].split('=')
+                console.log(subArr)
+                obj[subArr[0]] = subArr[1]
+            }
+            console.log('obj: ', obj)
+            return
+        }
+        delbtn.onclick = function () {
+            var date = new Date()
+            date.setMinutes(date.getMinutes() - 1)
+            document.cookie = `username=***;expires=${date.toUTCString()}`
+            document.cookie = `password=***;expires=${date.toUTCString()}`
+        }
+    </script>
+</body>
+
+</html>

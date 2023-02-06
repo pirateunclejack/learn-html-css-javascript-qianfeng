@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  div {
+    width: 180px;
+    height: 300px;
+    background-image: url(../img/docker.png);
+    /* background-position: -180px 0; */
+    /* animation: run 3s steps(1, end) 0s infinite forwards; */
+    /* animation: run 3s steps-start 0s infinite forwards; */
+    animation: run 5s step-end 0s infinite;
+  }
+
+  @keyframes run {
+    0% {
+      background-position: 0px 0;
+    }
+
+    14.3% {
+      background-position: -180px 0;
+    }
+
+    28.6% {
+      background-position: -360px 0;
+    }
+
+    42.9% {
+      background-position: -540px 0;
+    }
+
+    57.2% {
+      background-position: -720px 0;
+    }
+
+    71.5% {
+      background-position: -900px 0;
+    }
+
+    85.8% {
+      background-position: -1080px 0;
+    }
+
+    100% {
+      background-position: -1260px 0;
+    }
+  }
+</style>
+
+<body>
+  <div>
+  </div>
+</body>
+
+</html>

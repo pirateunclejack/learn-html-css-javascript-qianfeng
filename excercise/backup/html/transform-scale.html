@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0%;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      border: 1px solid green;
+      transition: all 2s;
+      transition-delay: 1s;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      transition: all 2s;
+      transform-origin: left center;
+    }
+
+    div:hover img {
+
+      /* transform: translateX(-100px); */
+      /* transform: translateX(-100px) translateY(100px); */
+      /* width: 150%; */
+      /* transform: scale(1.5); */
+      /* transform: scaleX(1.5); */
+      transform: scale(1.5);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <img src="../img/docker.png" alt="">
+  </div>
+</body>
+
+</html>

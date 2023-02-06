@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box1">
+    <h1></h1>
+    <ul></ul>
+  </div>
+
+  <div class="box2">
+    <h1></h1>
+    <ul></ul>
+  </div>
+
+  <script>
+    var data = {
+      title: 'sports',
+      list: ['sp1', 'sp2', 'sp3']
+    }
+    var data2 = {
+      title: 'zy',
+      list: ['zu1', 'zy2', 'zy3']
+    }
+
+    // function CreateList(select, data) {
+    // this.ele = document.querySelector(select)
+    // this.title = data.title,
+    // this.list = data.list,
+    // this.render = function () {
+    // var h1 = this.ele.querySelector('h1')
+    // var ul = this.ele.querySelector('ul')
+    // console.log(h1, ul)
+    // h1.innerHTML = this.title
+    // ul.innerHTML = this.list.map(item => `<li>${item}</li>`).join('')
+    // }
+    // }
+
+    function CreateList(select, data) {
+      this.ele = document.querySelector(select)
+      this.title = data.title,
+        this.list = data.list
+    }
+
+    CreateList.prototype.render = function () {
+      var h1 = this.ele.querySelector('h1')
+      var ul = this.ele.querySelector('ul')
+      console.log(h1, ul)
+      h1.innerHTML = this.title
+      ul.innerHTML = this.list.map(item => `<li>${item}</li>`).join('')
+
+    }
+
+    var obj1 = new CreateList('.box1', data)
+    var obj2 = new CreateList('.box2', data2)
+    console.log(obj1)
+    obj1.render()
+    obj2.render()
+
+    console.log(obj1.__proto__ === CreateList.prototype)
+
+
+
+
+    // function CreateObj(name) {
+      // this.name = name
+    // }
+// 
+    // var obj1 = new CreateObj('jfiwjiefo')
+    // console.log(obj1)
+// 
+
+  </script>
+</body>
+
+</html>

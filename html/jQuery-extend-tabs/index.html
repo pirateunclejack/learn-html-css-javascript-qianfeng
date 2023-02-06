@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./tabs.js"></script>
+    <link rel="stylesheet" href="./tabs.css">
+</head>
+
+<body>
+    <div id="aaa">
+        <ul class="header">
+            <!-- <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li> -->
+        </ul>
+        <ul class="box">
+            <!-- <li>111</li>
+            <li>222</li>
+            <li>333</li>
+            <li>444</li>
+            <li>555</li>
+            <li>666</li> -->
+        </ul>
+    </div>
+
+    <script>
+        // $('#aaa').tabs(0)
+
+        var list = [
+            {
+                title: 'aaa',
+                content: 'aaa content'
+            },
+            {
+                title: 'bbb',
+                content: 'bbb content'
+            },
+            {
+                title: 'ccc',
+                content: 'ccc content'
+            },
+        ]
+        var oHeaderLi = list.map(item => `<li>${item.title}</li>`).join('')
+        $('.header').html(oHeaderLi)
+        var oContentLi = list.map(item => `<li>${item.content}</li>`).join('')
+        $('.box').html(oContentLi)
+        $('#aaa').tabs(0)
+    </script>
+</body>
+
+</html>

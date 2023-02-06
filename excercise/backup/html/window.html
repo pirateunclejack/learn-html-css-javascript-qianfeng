@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    html,
+    body {
+      width: 2000px;
+      height: 2000px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="height: 300px;width: 100px;"></div>
+  <a href="./html2.html">forward</a>
+  <button id="btn">forward</button>
+
+  <!-- <script src="../js/main.js"> -->
+  <script>
+    btn.onclick = function () {
+      // location.href = './html2.html'
+      // history.forward()
+      history.go(1)
+    }
+    // var windowHeight = window.innerHeight
+    // var windowWidth = window.innerWidth
+    // console.log(windowHeight, windowWidth)
+
+    // btn.onclick = function () {
+    //   setInterval(function () {
+    //     window.alert('alert')
+    //   }, 2000);
+    // }
+    // btn.onclick = function () {
+    //   var res = confirm("Are you sure? ")
+    //   console.log(res)
+    // }
+    // btn.onclick = function () {
+    //   var res = prompt('Your username')
+    //   window.alert(res)
+    //   console.log(res)
+    // }
+    // console.log(location.href)
+    // btn.onclick = function () {
+    // location.href = 'https://www.baidu.com'
+    // }
+    // btn.onclick = function () {
+    //   location.reload
+    // }
+    // window.onload = function () {
+    //   console.log('finish')
+    // }
+    // window.onresize = function () {
+    //   window.alert('resize')
+    // }
+    // window.onscroll = function () {
+    //   console.log('scroll')
+    // }
+
+    // window.onscroll = function () {
+    //   if (document.documentElement.scrollTop > 100 || document.body.scroolltop > 100) {
+    //     console.log(document.documentElement.scrollTop || document.body.scroolltop)
+    //     btn.onclick = function () {
+    //       window.scrollTo(0, 0)
+    //     }
+    //   }
+    // }
+
+    // btn.onclick = function () {
+    //   window.scrollTo({
+    //     left: 0,
+    //     top: 0
+    //   })
+    //   // window.scrollTo(0, 0)
+    // }
+
+    // console.log(document.documentElement.scrollLeft || document.body.scrollLeft)
+    // window.onscroll = function () {
+    //   console.log(document.documentElement.scrollLeft || document.body.scrollLeft)
+    // }
+    // btn.onclick = function () {
+    //   // window.open('https://www.baidu.com')
+    //   window.close()
+    // }
+
+  </script>
+</body>
+
+</html>
